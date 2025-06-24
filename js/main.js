@@ -1,40 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
+    const menuIcon = document.getElementById('menu-icon');
     const navbarLinks = document.getElementById('navbar-links');
     const navLinks = document.querySelectorAll('.nav-link');
-  
+
     // Toggle mobile menu
     menuToggle.addEventListener('click', () => {
-      navbarLinks.classList.toggle('mobile-active');
-    });
-  
-    // Close mobile menu on nav click
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navbarLinks.classList.remove('mobile-active');
-      });
-    });
-  
-    // Smooth scroll with offset for fixed navbar
-    navLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        const navbarHeight = document.getElementById('navbar').offsetHeight;
-  
-        if (targetSection) {
-          const targetPosition = targetSection.offsetTop - navbarHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth',
-          });
-        }
-      });
-    });
-  });
-  
+        navbarLinks.classList.toggle('mobile-active');
 
+        // Change icon based on menu state
+        if (navbarLinks.classList.contains('mobile-active')) {
+            menuIcon.textContent = '✖'; // X icon
+        } else {
+            menuIcon.textContent = '☰'; // Hamburger icon
+        }
+    });
+
+    // Close mobile menu on nav click and revert icon
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbarLinks.classList.remove('mobile-active');
+            menuIcon.textContent = '☰'; // Reset to hamburger
+        });
+    });
+
+    // Smooth scroll with offset
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            const navbarHeight = document.getElementById('navbar').offsetHeight;
+
+            if (targetSection) {
+                const targetPosition = targetSection.offsetTop - navbarHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth',
+                });
+            }
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Carousel Specific Variables and Functions ---
@@ -118,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Smooth Scrolling Functionality for Navbar ---
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault(); // Prevent default anchor link behavior
 
             // Get the target section's ID from the href attribute
@@ -191,8 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         // If no section is active (e.g., scrolled to very top, or between sections), activate 'Home' if exists
         if (!firstActiveFound && document.querySelector('.nav-link[href="#home"]')) {
-             navLinks.forEach(link => link.classList.remove('active'));
-             document.querySelector('.nav-link[href="#home"]').classList.add('active');
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector('.nav-link[href="#home"]').classList.add('active');
         }
     };
 
