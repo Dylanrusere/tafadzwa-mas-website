@@ -32,11 +32,11 @@
             <!-- Nav Links -->
             <ul id="navbar-links" class="navbar-links hidden md:flex">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about_us" class="nav-link">About Us</a></li>
+                <li><a href="#about-us" class="nav-link">About Us</a></li>
                 <li class="dropdown"><a href="#collection" class="nav-link">Collection</a></li>
                 <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <!-- <li><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
             </ul>
         </div>
     </nav>
@@ -94,44 +94,60 @@
 
     <!-- Main Content Sections for Navbar Scrolling -->
     <main>
-
-        <!-- About Us -->
-        <section id="about_us">
+        <section id="about-us" class="content-section">
             <div class="overall_container about_overall_container">
                 <div class="about_container">
+                    <!-- Images -->
                     <div class="about_images_container">
                         <img src="./assets/images/dots.png" alt="" class="dots" data-aos="fade-right"
                             data-aos-duration="2000">
                         <img src="./assets/images/hero.webp" alt="" class="big_img" data-aos="fade-right"
                             data-aos-duration="2000">
-                        <img src="./assets/images/hero-3.webp" alt="" class="small_img" data-aos="slide-up"
+                        <img src="./assets/images/img1.jpg" alt="" class="small_img" data-aos="slide-up"
                             data-aos-duration="2000">
                     </div>
+
+                    <!-- Text Content -->
                     <div class="about_text_content">
                         <p class="about_head" data-aos="slide-down" data-aos-duration="2000">About <span>Us</span></p>
+
+                        <!-- Visible Intro -->
                         <p class="about_par">
                             We began our journey in the events industry five years ago, initially specializing in
-                            weddings. Over the years, we’ve had the privilege of collaborating with talented students
-                            from prestigious institutions like Aleit. This experience has allowed us to grow and expand
-                            our expertise, infusing creativity and passion into every event we curate.
-
-                            Towela Creatives is a dynamic and innovative event management company based in Zimbabwe,
-                            founded with a mission to transform the local event, PR, and hospitality industries. What
-                            began as a wedding and social event planning service has now evolved into a full-service
-                            agency, offering a broad range of services, including event planning and coordination,
-                            public relations, brand activations, and specialized event planning education.
-
-                            Our journey reflects a deep commitment to not only providing exceptional services but also
-                            empowering aspiring event planners through our Towela Academy. Our vision is to become
-                            Zimbabwe’s leading integrated events and hospitality company, recognized for excellence in
-                            event management, public relations, and educational programs.
+                            weddings.
+                            Over the years, we’ve had the privilege of collaborating with talented students...
                         </p>
+
+                        <!-- Hidden Extra Text -->
+                        <div id="moreText" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="about_par">
+                                from prestigious institutions like Aleit. This experience has allowed us to grow and
+                                expand our expertise, infusing creativity and passion into every event we curate.
+                                <br><br>
+                                Towela Creatives is a dynamic and innovative event management company based in Zimbabwe,
+                                founded with a mission to transform the local event, PR, and hospitality industries.
+                                What began as a wedding and social event planning service has now evolved into a
+                                full-service agency, offering a broad range of services, including event planning and
+                                coordination, public relations, brand activations, and specialized event planning
+                                education.
+                                <br><br>
+                                Our journey reflects a deep commitment to not only providing exceptional services but
+                                also empowering aspiring event planners through our Towela Academy. Our vision is to
+                                become Zimbabwe’s leading integrated events and hospitality company, recognized for
+                                excellence in event management, public relations, and educational programs.
+                            </p>
+                        </div>
+
+                        <!-- Toggle Button -->
+                        <button id="toggleBtn" class="mt-4 text-blue-600 hover:underline">Read More</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="collection" class="content-section pt-20 pb-20 bg-gray-100 flex items-center justify-center">
+
+        <section id="collection"
+            class="content-section featured_collections pt-20 pb-20 bg-gray-100 flex items-center justify-center">
             <h2>FEATURED COLLECTIONS</h2>
             <div class="collections-grid">
                 <div class="collection-item">
@@ -155,37 +171,37 @@
                 <div class="collection-item">
                     <img src="./assets/images/hero-2.webp" alt="Bar" />
                     <div class="overlay">
-                        <p>Bar</p>
+                        <p>Cutlery</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <img src="./assets/images/hero-2.webp" alt="Cake Stands" />
                     <div class="overlay">
-                        <p>Cake Stands</p>
+                        <p>Extras</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <img src="./assets/images/hero-2.webp" alt="Candle Holders" />
                     <div class="overlay">
-                        <p>Candle Holders</p>
+                        <p>Glassware</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <img src="./assets/images/hero-2.webp" alt="Bar" />
                     <div class="overlay">
-                        <p>Bar</p>
+                        <p>Dinner Plates, Placemats & Under Plates</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <img src="./assets/images/hero-2.webp" alt="Cake Stands" />
                     <div class="overlay">
-                        <p>Cake Stands</p>
+                        <p>Flower Vases</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <img src="./assets/images/hero-2.webp" alt="Candle Holders" />
                     <div class="overlay">
-                        <p>Candle Holders</p>
+                        <p>Brass</p>
                     </div>
                 </div>
             </div>
@@ -226,17 +242,17 @@
         </section>
 
 
-        <section id="contact-us" class="content-section h-screen flex items-center justify-center">
-            <h2 class="text-4xl font-bold text-gray-800">Contact Us Section</h2>
+        <section id="contact-us" class="content-section">
+            
         </section>
 
         <section id="gallery" class="content-section h-screen bg-white flex items-center justify-center">
             <h2 class="text-4xl font-bold text-gray-800">Gallery Section</h2>
         </section>
 
-        <section id="testimonials" class="content-section h-screen bg-gray-100 flex items-center justify-center">
+        <!-- <section id="testimonials" class="content-section h-screen bg-gray-100 flex items-center justify-center">
             <h2 class="text-4xl font-bold text-gray-800">Testimonials Section</h2>
-        </section>
+        </section> -->
     </main>
 
     <!-- Link to custom JavaScript file -->

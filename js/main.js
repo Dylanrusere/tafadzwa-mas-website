@@ -209,13 +209,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const mainImage = document.getElementById("main-image");
-  const takeALookBtn = document.getElementById("take-a-look-button");
-  const thumbnails = document.querySelectorAll(".thumbnail");
+const takeALookBtn = document.getElementById("take-a-look-button");
+const thumbnails = document.querySelectorAll(".thumbnail");
 
-  thumbnails.forEach((thumb) => {
+thumbnails.forEach((thumb) => {
     thumb.addEventListener("click", () => {
-      mainImage.src = thumb.src;
-      mainImage.alt = thumb.alt;
-      takeALookBtn.href = thumb.dataset.url;
+        mainImage.src = thumb.src;
+        mainImage.alt = thumb.alt;
+        takeALookBtn.href = thumb.dataset.url;
     });
-  });
+});
+
+const toggleBtn = document.getElementById("toggleBtn");
+const moreText = document.getElementById("moreText");
+
+let isExpanded = false;
+
+toggleBtn.addEventListener("click", () => {
+    isExpanded = !isExpanded;
+
+    if (isExpanded) {
+        moreText.classList.remove("max-h-0");
+        moreText.classList.add("max-h-[2000px]");
+        toggleBtn.textContent = "Read Less";
+    } else {
+        moreText.classList.remove("max-h-[2000px]");
+        moreText.classList.add("max-h-0");
+        toggleBtn.textContent = "Read More";
+    }
+});
