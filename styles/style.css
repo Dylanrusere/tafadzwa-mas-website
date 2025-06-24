@@ -99,6 +99,18 @@ body {
   display: flex;
   align-items: center;
   width: 12%;
+
+  @media (max-width: 768px) {
+    width: 20%;
+  }
+
+  @media (max-width: 530px) {
+    width: 30%;
+  }
+
+  @media (max-width: 425px) {
+    width: 45%;
+  }
 }
 
 /* ========== CAROUSEL ========== */
