@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hire Haus</title>
+    <!-- Link to Tailwind CSS for basic utilities -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Link to Google Fonts - Mulish (as per your code) -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed-navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <div class="logo-text">
+                    <span class="main-text">THE HIRE HAUS</span>
+                    <span class="sub-text">a decor experience</span>
+                </div>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="menu-toggle" class="hamburger-icon md:hidden">
+                ☰
+            </button>
+
+            <!-- Nav Links -->
+            <ul id="navbar-links" class="navbar-links hidden md:flex">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about-us" class="nav-link">About Us</a></li>
+                <li class="dropdown"><a href="#collection" class="nav-link">Collection</a></li>
+                <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Carousel Hero Section -->
+    <div id="home" class="carousel-container mt-20"> <!-- Added mt-20 to offset for navbar height -->
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+            <img src="./assets/images/hero.webp"
+                onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/6b4e3e/ffffff?text=Placeholder+Image+1';"
+                alt="Beautiful wedding table setting with rustic decor">
+            <div class="carousel-content">
+                <h1>Welcome to The Hire Haus!</h1>
+                <p>Let's create your dream wedding table</p>
+                <button class="btn-view-catalogue">View Our Latest Catalogue</button>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="./assets/images/hero-2.webp"
+                onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/4f6d7a/ffffff?text=Placeholder+Image+2';"
+                alt="Elegant outdoor event setup">
+            <div class="carousel-content">
+                <h1>Experience Unforgettable Moments</h1>
+                <p>Transform your event with our exquisite decor</p>
+                <button class="btn-view-catalogue">Discover Our Services</button>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <img src="./assets/images/hero-3.webp"
+                onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/8b5e83/ffffff?text=Placeholder+Image+3';"
+                alt="Cozy and inviting event space">
+            <div class="carousel-content">
+                <h1>Crafting Perfect Atmospheres</h1>
+                <p>Details that make your celebration unique</p>
+                <button class="btn-view-catalogue">Get Inspired</button>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons and Dots combined -->
+        <div class="carousel-dots-container">
+            <button class="carousel-nav-btn prev">&#10094;</button>
+            <div class="carousel-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+            <button class="carousel-nav-btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Main Content Sections for Navbar Scrolling -->
+    <main>
+        <section id="about-us" class="content-section h-screen bg-white flex items-center justify-center">
+            <h2 class="text-4xl font-bold text-gray-800">About Us Section</h2>
+        </section>
+
+        <section id="collection" class="content-section pt-20 pb-20 bg-gray-100 flex items-center justify-center">
+            <h2>FEATURED COLLECTIONS</h2>
+            <div class="collections-grid">
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Bar" />
+                    <div class="overlay">
+                        <p>Bar</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Cake Stands" />
+                    <div class="overlay">
+                        <p>Cake Stands</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Candle Holders" />
+                    <div class="overlay">
+                        <p>Candle Holders</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Bar" />
+                    <div class="overlay">
+                        <p>Bar</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Cake Stands" />
+                    <div class="overlay">
+                        <p>Cake Stands</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Candle Holders" />
+                    <div class="overlay">
+                        <p>Candle Holders</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Bar" />
+                    <div class="overlay">
+                        <p>Bar</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Cake Stands" />
+                    <div class="overlay">
+                        <p>Cake Stands</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="./assets/images/hero-2.webp" alt="Candle Holders" />
+                    <div class="overlay">
+                        <p>Candle Holders</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col md:flex-row items-center justify-center px-40 py-12 max-w-7xl mx-auto">
+            <!-- Image Section -->
+            <div class="md:w-1/2 w-full mb-8 md:mb-0">
+              <img src="./assets/images/hero-2.webp" alt="Wedding Table" class="w-full h-auto object-cover shadow-md">
+            </div>
+        
+            <!-- Text Content Section -->
+            <div class="md:w-1/2 w-full text-center md:text-left px-4">
+              <h2 class="text-2xl md:text-3xl font-semibold mb-4">REAL WEDDINGS</h2>
+              <p class="text-gray-600 mb-6">
+                We love these gorgeous images of our products that our clients have shared with us.
+              </p>
+              <a href="#" 
+                class="bg-black text-white px-6 py-3 hover:bg-gray-800 transition"
+                onclick="alert('Showing more weddings soon!')"
+              >
+                TAKE A LOOK
+              </a>
+            </div>
+          </section>
+
+        <section id="contact-us" class="content-section h-screen flex items-center justify-center">
+            <h2 class="text-4xl font-bold text-gray-800">Contact Us Section</h2>
+        </section>
+
+        <section id="gallery" class="content-section h-screen bg-white flex items-center justify-center">
+            <h2 class="text-4xl font-bold text-gray-800">Gallery Section</h2>
+        </section>
+
+        <section id="testimonials" class="content-section h-screen bg-gray-100 flex items-center justify-center">
+            <h2 class="text-4xl font-bold text-gray-800">Testimonials Section</h2>
+        </section>
+    </main>
+
+    <!-- Link to custom JavaScript file -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
