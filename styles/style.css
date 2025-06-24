@@ -474,3 +474,68 @@ body {
   transition: 0.8s ease-in-out;
   vertical-align: middle;
 }
+
+
+/* Gallery */
+#gallery{
+  background-image: url(../assets/images/hero.webp);
+  background-attachment: fixed;
+}
+
+.gallery_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 15%;
+}
+
+footer{
+  padding: 5%;
+}
+
+.footer_logo{
+  width: 20%;
+
+  @media(max-width:600px) {
+    width: 30%;
+  }
+
+  @media(max-width:450px) {
+    width: 40%;
+  }
+}
+
+.footer_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media(max-width:450px) {
+    grid-template-columns: 1fr;
+    gap: 4%;
+    margin-bottom: 5%;
+  }
+  
+}
+
+.footer_item{
+  display: flex;
+  flex-direction: column;
+
+  h2{
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+.footer_text{
+  margin-top: 2%;
+  border-top: 1px solid #000;
+  text-align: center;
+
+  p{
+    margin-top: 2%;
+  }
+}
+
+.instagram{
+  width: 30px;
+}
