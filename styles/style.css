@@ -381,3 +381,9 @@ body {
 .collection-item:hover .overlay {
   opacity: 1;
 }
+
+#real-weddings {
+  @media (max-width: 770px) {
+    padding: 10% 5%;
+  }
+}
