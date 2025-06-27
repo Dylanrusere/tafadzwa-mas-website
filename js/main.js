@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Change icon based on menu state
         if (navbarLinks.classList.contains('mobile-active')) {
-            menuIcon.textContent = '✖'; // X icon
+            menuIcon.textContent = 'X'; // X icon
         } else {
             menuIcon.textContent = '☰'; // Hamburger icon
         }
@@ -236,5 +236,37 @@ toggleBtn.addEventListener("click", () => {
         moreText.classList.remove("max-h-[2000px]");
         moreText.classList.add("max-h-0");
         toggleBtn.textContent = "Read More";
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    // Set initial theme based on localStorage
+    let savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.add(`${savedTheme}-theme`);
+    setIcon(savedTheme);
+
+    toggleBtn.addEventListener('click', () => {
+        if (body.classList.contains('light-theme')) {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            setIcon('dark');
+        } else {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+            setIcon('light');
+        }
+    });
+
+    function setIcon(theme) {
+        icon.innerHTML = theme === 'dark'
+            ? `<path d="M17.293 14.293A8 8 0 0112 20a8 8 0 110-16 8 8 0 015.293 13.707z"/>` // Moon icon
+            : `<path d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m13.07 5.07l-.71.71M6.34 6.34l-.71.71m0 10.6l.71.71m10.6-10.6l.71.71M12 5a7 7 0 0 0 0 14V5z" />`; // Sun icon
     }
 });

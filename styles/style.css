@@ -365,6 +365,7 @@ body {
 }
 
 .overlay {
+  padding: 10%;
   position: absolute;
   top: 0;
   left: 0;
@@ -536,6 +537,77 @@ footer{
   }
 }
 
-.instagram{
-  width: 30px;
+.instagram i{
+  height: 44px;
+  width: 44px;
 }
+
+
+/* ========== Toggle Button ========== */
+.theme-toggle-btn {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Optional icon sizing */
+.theme-toggle-btn .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========== THEME STYLES ========== */
+
+/* Light Theme (default) */
+body.light-theme {
+  background-color: #ffffff;
+  color: #000;
+}
+
+body.light-theme nav {
+  background-color: #ffffff;
+  color: #000;
+}
+
+body.light-theme .carousel-content h1,
+body.light-theme .carousel-content p {
+  color: #fff;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+body.dark-theme nav {
+  background-color: #000;
+  color: #fff;
+}
+
+
+body.dark-theme .nav-link.active {
+  color: #fff;
+  border-bottom-color: #fff;
+  font-weight: 700;
+}
+
+body.dark-theme .carousel-content h1,
+body.dark-theme .carousel-content p {
+  color: #ffffff;
+}
+
+/* You can continue with dark/light overrides for footer, sections, headings, etc. */

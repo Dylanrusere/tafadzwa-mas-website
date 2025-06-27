@@ -7,6 +7,7 @@
     <title>TOWELA CREATIVES</title>
     <!-- Link to Tailwind CSS for basic utilities -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link to custom CSS file -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- Link to Google Fonts - Mulish (as per your code) -->
@@ -38,6 +39,16 @@
             </ul>
         </div>
     </nav>
+    <!-- Theme Toggle Icon -->
+    <button id="themeToggle" class="theme-toggle-btn">
+        <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Default to sun icon -->
+            <path
+                d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m13.07 5.07l-.71.71M6.34 6.34l-.71.71m0 10.6l.71.71m10.6-10.6l.71.71M12 5a7 7 0 0 0 0 14V5z" />
+        </svg>
+    </button>
+
 
 
     <!-- Carousel Hero Section -->
@@ -143,7 +154,7 @@
 
 
         <section id="collection"
-            class="content-section featured_collections pt-20 pb-20 bg-gray-100 flex items-center justify-center">
+            class="content-section featured_collections pt-20 pb-20 flex items-center justify-center">
             <h2>FEATURED COLLECTIONS</h2>
             <div class="collections-grid">
                 <div class="collection-item">
@@ -165,7 +176,7 @@
                     </div>
                 </div>
                 <div class="collection-item">
-                    <img src="./assets/images/hero-2.webp" alt="Bar" />
+                    <img src="./assets/images/hero.webp" alt="Bar" />
                     <div class="overlay">
                         <p>Cutlery</p>
                     </div>
@@ -261,7 +272,7 @@
                     <a href="mailto:info@towela.co.zw">info@towela.co.zw</a>
                     <a href="tel:+263772555555">+263772555555</a>
                     <p>Follow us on:</p>
-                    <a class="instagram" href="https://www.instagram.com/we_are_towela/"><img src="./assets/images/instagram.png" alt=""></a>
+                    <a class="instagram" href="https://www.instagram.com/we_are_towela/"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="footer_item">
                     <h2>Quick Links</h2>
