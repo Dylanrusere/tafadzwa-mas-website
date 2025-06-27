@@ -442,8 +442,7 @@ body {
 .big_img {
   position: relative;
   width: 100%;
-  margin-left: 2%;
-  border: 5px solid #ffffff;
+  border: 3px solid #ffffff;
 }
 
 .small_img {
