@@ -623,8 +623,8 @@ body.dark-theme nav {
 
 
 body.dark-theme .nav-link.active {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #000;
+  border-bottom-color: #000;
   font-weight: 700;
 }
 
