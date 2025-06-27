@@ -348,10 +348,12 @@ body {
 
   @media(max-width:1000px){
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
   }
 
   @media(max-width:600px){
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 2rem;
   }
 }
 
@@ -630,7 +632,7 @@ body.dark-theme .nav-link.active {
 
 body.dark-theme .carousel-content h1,
 body.dark-theme .carousel-content p {
-  color: #ffffff;
+  color: #fff;
 }
 
 /* You can continue with dark/light overrides for footer, sections, headings, etc. */
